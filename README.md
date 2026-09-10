@@ -14,8 +14,8 @@ web/mobile app for viewing camera recordings through ONVIF/RTSP
    npx expo start
    ```
 
-MediaMTX connects to NVR feed and converts RTSP to HLS/WebRTC and serve to expo app
-cuz react native can't natively play RTSP stream
+MediaMTX connects to NVR feed and converts RTSP to HLS/WebRTC and serve to expo app  
+cuz react native can't natively play RTSP stream  
 this is plug and play so should be simple
 
 ## FastAPI Python backend

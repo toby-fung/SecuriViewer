@@ -2,13 +2,19 @@
 web/mobile app for viewing camera recordings through ONVIF/RTSP
 
 ## React Native and Expo frontend
-1. Install dependencies
+1. cd into subfolder
+
+   ```bash
+   cd securiviewer
+   ```
+   
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Start the app
 
    ```bash
    npx expo start

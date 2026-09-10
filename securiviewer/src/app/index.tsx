@@ -1,10 +1,12 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
+import { ThemedView } from "../../example/src/components/themed-view";
+import { ThemedText } from "../../example/src/components/themed-text";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text>sup broskis</Text>
-    </View>
+    <ThemedView style={styles.container}>
+      <ThemedText>sup broskis</ThemedText>
+    </ThemedView>
   );
 }
 

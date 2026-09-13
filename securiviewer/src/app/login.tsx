@@ -1,8 +1,9 @@
+import { Button } from "@/components/button";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { AuthContext } from "@/utils/authContext";
 import { useContext } from "react";
-import { Pressable, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 export default function Login() {
   const { isLoggedIn, logIn } = useContext(AuthContext);
@@ -11,9 +12,9 @@ export default function Login() {
 
   return (
     <ThemedView style={styles.container}>
-      <Pressable onPress={logIn}>
+      <Button onPress={logIn}>
         <ThemedText>Login</ThemedText>
-      </Pressable>
+      </Button>
     </ThemedView>
   );
 }

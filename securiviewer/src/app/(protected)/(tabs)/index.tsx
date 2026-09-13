@@ -1,7 +1,7 @@
+import { ThemedText } from "@/components/themed-text";
+import { ThemedView } from "@/components/themed-view";
 import { Link } from "expo-router";
 import { StyleSheet } from "react-native";
-import { ThemedText } from "../../../example/src/components/themed-text";
-import { ThemedView } from "../../../example/src/components/themed-view";
 
 export default function Index() {
   return (

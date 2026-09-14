@@ -1,15 +1,13 @@
-import { ThemedText } from "@/components/themed-text";
+import { ThemedInput } from "@/components/themed-input";
 import { ThemedView } from "@/components/themed-view";
-import { Link } from "expo-router";
-import { StyleSheet } from "react-native";
+import { Keyboard, Pressable, StyleSheet } from "react-native";
 
 export default function Index() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText>sup broskis</ThemedText>
-      <Link href="/about" style={styles.linkPrimary}>
-        Go to about
-      </Link>
+      <Pressable style={styles.dismissArea} onPress={Keyboard.dismiss}>
+        <ThemedInput placeholder="IP" />
+      </Pressable>
     </ThemedView>
   );
 }
@@ -20,9 +18,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  linkPrimary: {
-    lineHeight: 30,
-    fontSize: 14,
-    color: "#3c87f7",
+  dismissArea: {
+    flex: 1,
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

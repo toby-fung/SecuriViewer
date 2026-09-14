@@ -6,9 +6,7 @@ import { useContext } from "react";
 import { StyleSheet } from "react-native";
 
 export default function Login() {
-  const { isLoggedIn, logIn } = useContext(AuthContext);
-
-  console.log(isLoggedIn);
+  const { logIn } = useContext(AuthContext);
 
   return (
     <ThemedView style={styles.container}>

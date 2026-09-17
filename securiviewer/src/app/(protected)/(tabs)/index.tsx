@@ -48,7 +48,10 @@ export default function Index() {
         ></LabelledInput>
         <Button
           onPress={() => {
-            alert("Submitted");
+            alert(`IP Address: ${ip}
+Port: ${port}
+Username: ${username}
+Password: ${password}`);
           }}
           style={styles.button}
         >

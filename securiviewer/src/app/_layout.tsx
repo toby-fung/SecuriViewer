@@ -26,7 +26,10 @@ function RootLayoutNav() {
           <Stack.Screen name="(protected)" />
         </Stack.Protected>
         <Stack.Protected guard={!isLoggedIn}>
-          <Stack.Screen name="login" />
+          <Stack.Screen
+            name="login"
+            options={{ animation: "slide_from_left" }}
+          />
         </Stack.Protected>
       </Stack>
     </ThemeProvider>

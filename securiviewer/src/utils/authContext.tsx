@@ -1,4 +1,3 @@
-import { router } from "expo-router";
 import { createContext, PropsWithChildren, useState } from "react";
 
 type AuthState = {

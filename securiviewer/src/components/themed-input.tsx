@@ -4,28 +4,33 @@ import { StyleSheet, TextInput, TextInputProps } from "react-native";
 
 // TODO add type/themecolour stuff
 
-type InputProps = TextInputProps & {
+export type InputProps = TextInputProps & {
   themeColor?: ThemeColor;
   disabled?: boolean;
 };
 
-export function ThemedInput({ themeColor, disabled, ...rest }: InputProps) {
+export function ThemedInput({
+  themeColor,
+  disabled,
+  style,
+  ...rest
+}: InputProps) {
   const theme = useTheme();
 
-  return <TextInput style={styles.container} {...rest}></TextInput>;
+  return (
+    <TextInput
+      style={[styles.container, style, disabled && styles.disabled]}
+      {...rest}
+    />
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#007AFF",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
     borderRadius: 6,
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    minWidth: 100,
-    marginBottom: 10,
+    paddingHorizontal: 5,
+    paddingVertical: 10,
   },
   disabled: {
     opacity: 50,

@@ -1,5 +1,4 @@
 import { Stack } from "expo-router";
-import { StyleSheet } from "react-native";
 
 export default function ProtectedLayout() {
   return (
@@ -8,4 +7,3 @@ export default function ProtectedLayout() {
     </Stack>
   );
 }
-const styles = StyleSheet.create({});

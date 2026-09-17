@@ -21,12 +21,12 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <Stack screenOptions={{ headerShown: false }}>
         <Stack.Protected guard={isLoggedIn}>
-          <Stack.Screen name="(protected)" options={{ headerShown: false }} />
+          <Stack.Screen name="(protected)" />
         </Stack.Protected>
         <Stack.Protected guard={!isLoggedIn}>
-          <Stack.Screen name="login" options={{ headerTitle: "Login" }} />
+          <Stack.Screen name="login" />
         </Stack.Protected>
       </Stack>
     </ThemeProvider>

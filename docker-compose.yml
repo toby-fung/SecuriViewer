@@ -1,0 +1,22 @@
+services:
+  mediamtx:
+    image: bluenviron/mediamtx:latest
+    container_name: mediamtx
+    restart: unless-stopped
+    volumes:
+      - ./backend/mediamtx.yml:/mediamtx.yml:ro
+    # no ports: only reachable from inside Docker
+    environment:
+      - MTX_HLSCDNSECRET=${HLS_CDN_SECRET}
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: unless-stopped
+    depends_on:
+      - mediamtx
+    ports:
+      - "3000:3000"
+    environment:
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}
+      - ALLOWED_EMAILS=${ALLOWED_EMAILS}
+      - HLS_CDN_SECRET=${HLS_CDN_SECRET}
